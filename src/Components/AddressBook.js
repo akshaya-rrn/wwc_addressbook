@@ -21,14 +21,14 @@ function AddressBook() {
     <div className="App">
       <h1>Address Book</h1>
       { showError ? <h2>Something's wrong at the server. Please try later</h2> : null}
-        <div class={""}>
+        <div class={"grid grid-cols-4 gap-4"}>
         
             {users.map((user,index)=> {
                 return (
-                    <div class={"rounded overflow-hidden shadow-lg"}>
+                    <div>
                         <img
                             className="w-full"
-                            src={user.picture.large} alt=""/>
+                            src={user.picture.medium} alt=""/>
                         <div className="px-6 py-4">
                             <div className="font-bold text-xl mb-2">{user.name.title} {user.name.first} {user.name.last}</div>
                             <p className="text-gray-700 text-base">{user.gender}  ( {user.dob.age} )</p>
