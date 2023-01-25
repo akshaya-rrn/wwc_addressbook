@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import {GetUsers} from "../services/users";
 
 function AddressBook() {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState<any[]>([]);
   const [showError, setError] = useState(false);
 
   useEffect(() => {
@@ -19,10 +19,10 @@ function AddressBook() {
 
   return (
     <div className="App">
-      <h1 class="text-5xl">Address Book</h1>
+      <h1 className="text-5xl">Address Book</h1>
         <br/>
       { showError ? <h2>Something's wrong at the server. Please try later</h2> : null}
-        <div class={"grid grid-cols-5 gap-5"}>
+        <div className={"grid grid-cols-5 gap-5"}>
         
             {users.map((user,index)=> {
                 return (
