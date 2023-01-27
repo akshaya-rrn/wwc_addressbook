@@ -2,9 +2,30 @@ import './AddressBook.css';
 import {useEffect, useState} from "react";
 import {GetUsers} from "../services/users";
 
-function AddressBook() {
-  const [users, setUsers] = useState<any[]>([]);
-  const [showError, setError] = useState(false);
+export interface UserData {
+    gender: string;
+    name: Name;
+    dob: any;
+    cell: string;
+    picture: Picture;
+    email: string;
+}
+
+interface Picture {
+    large: string;
+    medium: string;
+    thumbnail: string;
+}
+
+interface Name {
+    title: string;
+    first: string;
+    last:  string;
+}
+
+const AddressBook : React.FunctionComponent= () => {
+  const [users, setUsers] = useState<UserData[]>([]);
+  const [showError, setError] = useState<boolean>(false);
 
   useEffect(() => {
       GetUsers().then((response) => {
@@ -23,8 +44,7 @@ function AddressBook() {
         <br/>
       { showError ? <h2>Something's wrong at the server. Please try later</h2> : null}
         <div className={"grid grid-cols-5 gap-5"}>
-        
-            {users.map((user,index)=> {
+            {users.map((user: UserData,index)=> {
                 return (
                     <div className={"bg-sky-500/10"}>
                         <img src={user.picture.medium} alt=""/>
@@ -44,3 +64,4 @@ function AddressBook() {
 }
 
 export default AddressBook;
+
