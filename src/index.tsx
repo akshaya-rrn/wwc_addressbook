@@ -6,5 +6,5 @@ import AddressBook from './Components/AddressBook';
 // @ts-ignore
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <AddressBook />
+   <AddressBook />
 );
