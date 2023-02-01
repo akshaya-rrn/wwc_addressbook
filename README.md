@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React AddressBook](https://github.com/facebook/create-react-app).
 
 ## Branch Info
-[Main](https://github.com/akshaya-rrn/wwc_addressbook/tree/main) contains the React code
+[Main](https://github.com/akshaya-rrn/wwc_addressbook/tree/main) contains the React code. \
 [Migrate_Typescript](https://github.com/akshaya-rrn/wwc_addressbook/tree/migrate-typescript) contains the React+Typescript code
 
 
